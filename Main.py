@@ -1,5 +1,3 @@
-import os
-import sys
 from parsers.Web_Parser import web_parser_menu
 from parsers.File_Parser import file_parser_menu
 from parsers.Dir_Parser import dir_parser_menu

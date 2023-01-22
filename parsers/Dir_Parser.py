@@ -1,6 +1,5 @@
 import os
 from tools.util_func import clearConsole
-from tools.scrape import find_IoC, find_TTP
 from parsers.File_Parser import file_parser
 
 def dir_parser(dir,ttp_or_ioc=3):
