@@ -36,7 +36,6 @@ def text_parser_menu():
     try:
         choice = int(choice)
     except ValueError:
-        return ("Not a choice","you must choose the number of an option among those proposed")
+        return ("Not a choice","you must choose the number of an option among those proposed"),False
     result = text_parser(text,choice)
-    input("The raw result is:\n"+str(result))
-    return True
+    return result,True

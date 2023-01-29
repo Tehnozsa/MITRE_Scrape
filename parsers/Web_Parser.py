@@ -31,7 +31,7 @@ def web_parser_menu():
     clearConsole()
     url = input("You choose the web parser, insert url to parse:\n")
     if "http://" not in url:
-        return error("Wrong URL","Maybe add http:// at your URL")
+        return ("Wrong URL","Maybe add http:// at your URL"),False
     print("1. Parse TTP")
     print("2. Parse IoC")
     print("3. Parse TTP+IoC")    
@@ -39,7 +39,6 @@ def web_parser_menu():
     try:
         choice = int(choice)
     except ValueError:
-        return ("Not a choice","you must choose the number of an option among those proposed")
+        return ("Not a choice","you must choose the number of an option among those proposed"),False
     result = web_parser(url,int(choice))
-    input("The raw result is:\n"+str(result))
-    return True
+    return result,True
